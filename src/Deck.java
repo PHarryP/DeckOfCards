@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -6,6 +7,7 @@ public class Deck {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		Card c = new Card(int v,String n, String s, String c);
+		ArrayList<Card> deck2=new ArrayList<>();
 		Card[] deck = new Card[52];
 		String[] names= {"Ace","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Jack","Queen","King"};
 		String[] suit = {"Spades","Clubs","Hearts","Diamonds"};
@@ -19,6 +21,7 @@ public class Deck {
 			}
 			for (int y=0; y<13;y++) {
 				deck[x*13+y]= new Card(y+1, names[y], suit[x], colour[x/2]);
+				
 			}
 		}
 		shuffle (deck); 
